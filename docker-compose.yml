@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+  openbts-umts:
+    container_name: openbts-umts
+    build:
+      network: host
+      context: .
+    network_mode: "host"
+    privileged: true
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
