@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 if [ "$#" -ne 4 ]; then
-    printf "Arguments do not match.\nUSAGE: ./starttmux.sh NAME IMSI MSISDN KI\n"
+    printf "Error: arguments do not match.\nUSAGE: ./starttmux.sh NAME IMSI MSISDN KI\n"
     exit 1
 fi
 
 if ! command -v "tmux" &> /dev/null
 then
-    printf "Tmux could not be found. Install it to use this script.\n"
+    printf "Error: tmux could not be found. Install it to use this script.\n"
     exit 1
 fi
 
 if ! command -v "docker-compose" &> /dev/null
 then
-    printf "docker-compose could not be found. Install it to use this script.\n"
+    printf "Error: docker-compose could not be found. Install it to use this script.\n"
     exit 1
 fi
 
